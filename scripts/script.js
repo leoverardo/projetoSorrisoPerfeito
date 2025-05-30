@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+   
     const modal = document.createElement('div');
     modal.classList.add('modal');
 
@@ -30,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.body.appendChild(modal);
 
-    // Validação do formulário
     const form = modal.querySelector('#form-orcamento');
     form.addEventListener('submit', function(event) {
         const nome = this.name.value.trim();
@@ -72,13 +72,11 @@ document.addEventListener('DOMContentLoaded', function () {
         return re.test(email.toLowerCase());
     }
 
-    // Botão fechar modal
     const closeModal = modal.querySelector('#closeModal');
     closeModal.addEventListener('click', function() {
         modal.classList.remove('active');
     });
 
-    // Abrir modal ao clicar em cards
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('click', function() {
@@ -86,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // IntersectionObserver para animações
     const visualiza = new IntersectionObserver((entrada, visualiza) => {
         entrada.forEach(entry => {
             if (entry.isIntersecting) {
@@ -99,4 +96,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.banner, .card, .titulo_servicos, .titulo_contato, .footer-col, .footer-bottom');
     elements.forEach(el => visualiza.observe(el));
 
+    
+    const openBtn = document.getElementById('openModalBtn');
+    const modalContainer = document.getElementById('modalContainer');
+
+    if (openBtn && modalContainer) {
+        openBtn.addEventListener('click', () => {
+        
+            modalContainer.innerHTML = `
+                <div class="modal-content">
+                    <button class="closeModal">&times;</button>
+                    <form id="form-orcamento-personalizado" action="https://formsubmit.co/leonardomoura080904@gmail.com" method="POST" class="form-personalizado">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                        
+                        <label for="mensagem">Descreva seu pedido personalizado</label>
+                        <textarea name="mensagem" id="mensagem" rows="5" placeholder="Escreva aqui sua mensagem...." required></textarea>
+                        
+                        <button type="submit">Enviar Pedido</button>
+                    </form>
+                </div>
+            `;
+            modalContainer.classList.remove('hidden');
+
+            modalContainer.querySelector('.closeModal').addEventListener('click', () => {
+                fecharModal();
+            });
+
+            modalContainer.addEventListener('click', (e) => {
+                if (e.target === modalContainer) {
+                    fecharModal();
+                }
+            });
+
+            function fecharModal() {
+                modalContainer.classList.add('hidden');
+                modalContainer.innerHTML = ''; 
+            }
+        });
+    }
 });

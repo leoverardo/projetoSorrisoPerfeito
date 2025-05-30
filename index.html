@@ -26,16 +26,16 @@
             <ol><a href="#contato">Contato</a></ol>
         </nav>
     </header>
-
+    <main>
     <img class="body_img banner"
         src="interatividade/assets/img/Banner Paisagem Consultório Odontológico Moderno Azul E Branco (1).png" alt=""
         width="100%" height="20%">
 
     <section class="section_servicos" id="servicos">
         <div class="div_titulo_servicos">
-            <h1 class="titulo_servicos">SERVIÇOS</h1>
+            <h1 class="titulo_contato">Nossos Serviços</h1>
         </div>
-        <h2>Escolha o Procedimento</h2>
+        <h2>Clique no Procedimento Desejado</h2>
         <ul class="ul_servicos">
             <ol><img class="card clareamento"
                     src="interatividade/assets/img/Post de Instagram para Procedimentos Clareamento dental.png"
@@ -51,23 +51,8 @@
 
 
     </section>
-    <section class="section_contato">
-        <div class="div_titulo_contato">
-            <h2 class="titulo_contato">Serviço Personalizado</h2>
-        </div>
-        <form id="form-orcamento" action="https://formsubmit.co/leonardomoura080904@gmail.com" method="POST"
-            class="form-personalizado">
-            <input type="text" name="name" placeholder="Seu Nome" required>
-            <input type="email" name="email" placeholder="Seu E-mail" required>
+    </main>
 
-            <label for="mensagem">Descreva seu pedido personalizado</label>
-            <textarea name="mensagem" id="mensagem" rows="5" placeholder="Escreva aqui o que você precisa..."
-                required></textarea>
-
-            <button type="submit">Enviar Pedido</button>
-        </form>
-
-    </section>
     <section class="section_contato" id="contato">
         <div class="div_titulo_contato">
             <h1 class="titulo_contato">Entre em Contato</h1>
@@ -98,6 +83,9 @@
                         <li><a href="#">WhatsApp</a></li>
                     </ul>
                 </div>
+                <button id="openModalBtn">Entre em Contato <br>Conosco</button>
+
+                <div id="modalContainer" class="modal hidden"></div>
                 <div class="footer-col">
                     <a href="#top" class="back-to-top">Voltar ao topo</a>
                 </div>

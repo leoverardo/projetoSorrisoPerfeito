@@ -1,475 +1,457 @@
-   html {
-       scroll-behavior: smooth;
-   }
-
-   .header {
-       background-image: linear-gradient(to right, #92D7FF, #005EB4);
-       padding: 10px 50px;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       position: sticky;
-       top: 0;
-       z-index: 100;
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   }
-
-   .div_img {
-       display: flex;
-       align-items: center;
-   }
-
-   .header_logo {
-       width: 150px;
-       height: auto;
-   }
-
-   .header_info {
-       display: flex;
-       gap: 30px;
-       font-family: "Roboto", sans-serif;
-       font-size: 18px;
-       font-weight: 500;
-   }
-
-   .header_info a {
-       color: white;
-       text-decoration: none;
-       position: relative;
-       padding: 5px 0;
-       transition: color 0.3s ease;
-   }
-
-   .header_info a::after {
-       content: '';
-       position: absolute;
-       width: 0%;
-       height: 2px;
-       display: block;
-       margin-top: 5px;
-       right: 0;
-       background: white;
-       transition: width 0.3s ease;
-       -webkit-transition: width 0.3s ease;
-   }
-
-   .header_info a:hover {
-       color: #e0f7ff;
-   }
-
-   .header_info a:hover::after {
-       width: 100%;
-       left: 0;
-       right: auto;
-   }
-
-   .body_img {
-       padding-top: 10px;
-       background-color: #92D7FF;
-   }
-
-   .banner {
-       opacity: 0;
-       transform: translateY(50px);
-       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-   }
-
-   .banner.visible {
-       opacity: 1;
-       transform: translateY(0);
-   }
-
-   .section_servicos {
-       background-image: linear-gradient(to bottom, #92D7FF, #005EB4);
-       padding-bottom: 50px;
-   }
-
-   .div_titulo_servicos {
-       margin-top: -5px;
-       padding: 5%;
-       display: flex;
-       justify-content: center;
-   }
-
-   .titulo_servicos {
-       font-family: "roboto";
-       font-weight: 300;
-       font-size: 30px;
-       letter-spacing: 1.8px;
-       text-transform: uppercase;
-       text-align: center;
-       color: white;
-   }
-
-   .ul_servicos {
-       display: flex;
-       justify-content: space-evenly;
-       flex-wrap: wrap;
-       gap: 20px;
-   }
-
-   .card,
-   .titulo_servicos,
-   .titulo_contato,
-   .footer-col,
-   .footer-bottom {
-       opacity: 0;
-       transform: translateY(50px);
-       transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-   }
-
-   .card.visible,
-   .titulo_servicos.visible,
-   .titulo_contato.visible,
-   .footer-col.visible,
-   .footer-bottom.visible {
-       opacity: 1;
-       transform: translateY(0);
-   }
-
-   .card {
-       border-radius: 25px;
-       transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
-   }
-
-   .card:hover {
-       transform: scale(1.05);
-       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-       cursor: pointer;
-   }
-
-
-   .section_contato {
-       background-image: linear-gradient(to bottom, #005EB4, #005EB4);
-
-   }
-
-   .div_titulo_contato {
-       margin-top: -5px;
-       padding: 5%;
-       display: flex;
-       justify-content: center;
-   }
-
-   .titulo_contato {
-       font-family: "Roboto";
-       font-size: 60px;
-       color: white;
-       -webkit-text-stroke-color: white;
-       -webkit-text-stroke-width: 1px;
-   }
-
-   .footer {
-       color: white;
-       padding: 40px 20px;
-       font-family: "Roboto", sans-serif;
-   }
-
-   .footer-top {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       gap: 30px;
-       margin-bottom: 30px;
-   }
-
-   .footer-col h3 {
-       font-size: 18px;
-       font-weight: bold;
-       margin-bottom: 10px;
-       text-transform: uppercase;
-   }
-
-   .footer-col ul {
-       list-style: none;
-       padding: 0;
-       margin: 0;
-   }
-
-   .footer-col ul li {
-       margin-bottom: 8px;
-       font-size: 16px;
-   }
-
-   .footer-col ul.social li a {
-       text-decoration: none;
-       color: white;
-       transition: opacity 0.3s ease;
-   }
-
-   .footer-col ul.social li a:hover {
-       opacity: 0.7;
-   }
-
-   .back-to-top {
-       display: inline-block;
-       margin-top: 10px;
-       font-size: 14px;
-       text-decoration: underline;
-       color: white;
-   }
-
-   .footer-bottom {
-       border-top: 1px solid rgba(255, 255, 255, 0.3);
-       padding-top: 20px;
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       font-size: 14px;
-   }
-
-   .footer-links a {
-       margin-left: 15px;
-       text-decoration: none;
-       color: white;
-       transition: opacity 0.3s ease;
-   }
-
-   .footer-links a:hover {
-       opacity: 0.7;
-   }
-
-   @media (max-width: 600px) {
-       .header {
-           background-image: linear-gradient(to right, #92D7FF, #005EB4);
-           padding: 10px 50px;
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           position: sticky;
-           top: 0;
-           z-index: 100;
-           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-       }
-
-       .header_logo {
-           width: 120px;
-           /* opcionalmente reduzir o tamanho da logo */
-           margin-bottom: 10px;
-       }
-
-       .header_info {
-           display: flex;
-           gap: 30px;
-           font-family: "Roboto", sans-serif;
-           font-size: 15px;
-           font-weight: 500;
-       }
-
-       .header_info a {
-           width: 100%;
-       }
-
-       .footer-top {
-           flex-direction: column;
-           align-items: flex-start;
-       }
-
-       .footer-bottom {
-           flex-direction: column;
-           gap: 10px;
-           align-items: flex-start;
-       }
-   }
-
-   @media (max-width: 400px) {
-       .header {
-           padding: 10px 15px;
-       }
-
-       .header_logo {
-           width: 100px;
-       }
-
-       .header_info {
-           display: flex;
-           gap: 1 0px;
-       }
-
-       .header_info a {
-           padding: 4px 0;
-       }
-
-       .header_info a::after {
-           height: 1px;
-       }
-   }
-
-   .modal {
-       position: fixed;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       background: rgba(0, 0, 0, 0.6);
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       opacity: 0;
-       pointer-events: none;
-       transition: opacity 0.3s ease;
-       z-index: 1000;
-   }
-
-   .modal.active {
-       opacity: 1;
-       pointer-events: all;
-   }
-
-   .modal-content {
-       background: white;
-       padding: 30px 40px;
-       border-radius: 15px;
-       text-align: center;
-       position: relative;
-       max-width: 400px;
-       width: 90%;
-       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-       animation: slideIn 0.4s ease forwards;
-   }
-
-   .modal-content h1 {
-       font-family: "Roboto";
-       font-size: 24px;
-       margin-bottom: 20px;
-       color: #005EB4;
-   }
-
-   .modal-content button {
-       padding: 10px 20px;
-       background: #005EB4;
-       color: white;
-       border: none;
-       border-radius: 8px;
-       cursor: pointer;
-       font-family: "Roboto";
-       transition: background 0.3s ease;
-   }
-
-   .modal-content button:hover {
-       background: #003f7f;
-   }
-
-   .modal-form {
-       display: flex;
-       flex-direction: column;
-       gap: 15px;
-       margin-bottom: 15px;
-   }
-
-   .modal-form input {
-       padding: 12px 15px;
-       border: 1px solid #ccc;
-       border-radius: 8px;
-       font-family: "Roboto";
-       font-size: 14px;
-       transition: border-color 0.3s ease, box-shadow 0.3s ease;
-   }
-
-   .modal-form input:focus {
-       border-color: #005EB4;
-       box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
-       outline: none;
-   }
-
-   .modal-form button {
-       padding: 12px 20px;
-       background: #005EB4;
-       color: white;
-       border: none;
-       border-radius: 8px;
-       cursor: pointer;
-       font-family: "Roboto";
-       font-size: 14px;
-       transition: background 0.3s ease;
-   }
-
-   .modal-form button:hover {
-       background: #003f7f;
-   }
-
-   .modal-form label {
-       text-align: left;
-       font-family: "Roboto";
-       font-size: 14px;
-       color: #005EB4;
-       margin-top: 5px;
-       font-weight: 500;
-   }
-
-   .modal-form select {
-       padding: 12px 15px;
-       border: 1px solid #ccc;
-       border-radius: 8px;
-       font-family: "Roboto";
-       font-size: 14px;
-       transition: border-color 0.3s ease, box-shadow 0.3s ease;
-       background-color: white;
-       appearance: none;
-       /* Remove estilo padrão do sistema */
-   }
-
-   .modal-form select:focus {
-       border-color: #005EB4;
-       box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
-       outline: none;
-   }
-
-   .form-personalizado {
-       display: flex;
-       flex-direction: column;
-       gap: 15px;
-       max-width: 600px;
-       margin: 0 auto;
-       padding: 30px;
-       background-color: white;
-       border-radius: 15px;
-       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-       font-family: "Roboto", sans-serif;
-
-   }
-
-   .form-personalizado input,
-   .form-personalizado textarea {
-       padding: 12px 15px;
-       border: 1px solid #ccc;
-       border-radius: 8px;
-       font-size: 16px;
-       font-family: "Roboto";
-       transition: border-color 0.3s ease, box-shadow 0.3s ease;
-       resize: none;
-   }
-
-   .form-personalizado input:focus,
-   .form-personalizado textarea:focus {
-       border-color: #005EB4;
-       box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
-       outline: none;
-   }
-
-   .form-personalizado label {
-       font-size: 14px;
-       color: #005EB4;
-       font-weight: 500;
-   }
-
-   .form-personalizado button {
-       padding: 12px 20px;
-       background: #005EB4;
-       color: white;
-       border: none;
-       border-radius: 8px;
-       cursor: pointer;
-       font-size: 16px;
-       transition: background 0.3s ease;
-   }
-
-   .form-personalizado button:hover {
-       background: #003f7f;
-   }
-
-
-   .section_servicos h2 {
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-image: linear-gradient(to right, #92D7FF, #005EB4);
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.div_img {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo {
+    width: 150px;
+    height: auto;
+}
+
+.header_info {
+    display: flex;
+    gap: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header_info a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.header_info a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.header_info a:hover {
+    color: #e0f7ff;
+}
+
+.header_info a:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.body_img {
+    padding-top: 10px;
+    background-color: #92D7FF;
+}
+
+.banner {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.banner.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section_servicos {
+    background-color: #92D7FF;
+    padding-bottom: 50px;
+}
+
+.div_titulo_servicos {
+    margin-top: -5px;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_servicos {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.ul_servicos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card,
+.titulo_servicos,
+.titulo_contato,
+.footer-col,
+.footer-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.card.visible,
+.titulo_servicos.visible,
+.titulo_contato.visible,
+.footer-col.visible,
+.footer-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    border-radius: 25px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.section_contato {
+    background-image: linear-gradient(to bottom, #005EB4, #005EB4);
+}
+
+.div_titulo_contato {
+    margin-top: -5px;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #92D7FF, #005EB4);
+}
+
+.titulo_contato {
+    font-family: "Roboto";
+    font-size: 60px;
+    color: white;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+}
+
+.footer {
+    color: white;
+    padding: 40px 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.footer-col ul.social li a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.footer-col ul.social li a:hover {
+    opacity: 0.7;
+}
+
+.back-to-top {
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #005EB4, #0078D7);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 94, 180, 0.2);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 10px 50px;
+    }
+
+    .header_logo {
+        width: 120px;
+        margin-bottom: 10px;
+    }
+
+    .header_info {
+        font-size: 15px;
+    }
+
+    .header_info a {
+        width: 100%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 400px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header_logo {
+        width: 100px;
+    }
+
+    .header_info {
+        gap: 10px;
+    }
+
+    .header_info a {
+        padding: 4px 0;
+    }
+
+    .header_info a::after {
+        height: 1px;
+    }
+}
+
+#openModalBtn {
+    padding: 14px 20px;
+    background: linear-gradient(135deg, #005EB4, #0078D7);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 94, 180, 0.2);
+}
+
+#openModalBtn:hover {
+    background: linear-gradient(135deg, #003f7f, #005EB4);
+    transform: translateY(-2px);
+}
+
+.modal, 
+#modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal.active, 
+#modalContainer:not(.hidden) {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+.modal-content {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: slideIn 0.4s ease forwards;
+}
+
+.modal-content h1 {
+    font-family: "Roboto";
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #005EB4;
+}
+
+.modal-content button {
+    padding: 5px 10px;
+    background: #005EB4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Roboto";
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: #003f7f;
+}
+
+
+.closeModal {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #005EB4;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.closeModal:hover {
+    color: #003f7f;
+}
+
+.modal-form, .form-personalizado {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-form input, 
+.form-personalizado input, 
+.form-personalizado textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.modal-form input:focus, 
+.form-personalizado input:focus, 
+.form-personalizado textarea:focus {
+    border-color: #005EB4;
+    box-shadow: 0 0 5px rgba(0,94,180,0.5);
+    outline: none;
+    background-color: #fff;
+}
+
+.modal-form button, .form-personalizado button {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #005EB4, #0078D7);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Roboto";
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 94, 180, 0.2);
+}
+
+.modal-form button:hover, .form-personalizado button:hover {
+    background: linear-gradient(135deg, #003f7f, #005EB4);
+    transform: translateY(-2px);
+}
+
+.modal-form label, .form-personalizado label {
+    text-align: left;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #005EB4;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.modal-form select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    appearance: none;
+}
+
+.modal-form select:focus {
+    border-color: #005EB4;
+    box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
+    outline: none;
+}
+
+.section_servicos h2 {
     text-align: center;
     font-family: "Roboto";
     font-size: 60px;
@@ -477,17 +459,15 @@
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
     margin-bottom: 40px;
-   }
+}
 
-
-   @keyframes slideIn {
-       from {
-           transform: translateY(-50px);
-           opacity: 0;
-       }
-
-       to {
-           transform: translateY(0);
-           opacity: 1;
-       }
-   }
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
