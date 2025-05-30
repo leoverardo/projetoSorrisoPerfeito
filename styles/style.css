@@ -384,6 +384,31 @@
    .modal-form button:hover {
        background: #003f7f;
    }
+   .modal-form label {
+    text-align: left;
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #005EB4;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.modal-form select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    appearance: none; /* Remove estilo padrão do sistema */
+}
+
+.modal-form select:focus {
+    border-color: #005EB4;
+    box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
+    outline: none;
+}
 
    @keyframes slideIn {
        from {
