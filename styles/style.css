@@ -139,6 +139,7 @@
 
    .section_contato {
        background-image: linear-gradient(to bottom, #92D7FF, #005EB4);
+       
    }
 
    .div_titulo_contato {
@@ -409,6 +410,60 @@
     box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
     outline: none;
 }
+
+.form-personalizado {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-family: "Roboto", sans-serif;
+    
+}
+
+.form-personalizado input,
+.form-personalizado textarea {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "Roboto";
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
+}
+
+.form-personalizado input:focus,
+.form-personalizado textarea:focus {
+    border-color: #005EB4;
+    box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
+    outline: none;
+}
+
+.form-personalizado label {
+    font-size: 14px;
+    color: #005EB4;
+    font-weight: 500;
+}
+
+.form-personalizado button {
+    padding: 12px 20px;
+    background: #005EB4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.form-personalizado button:hover {
+    background: #003f7f;
+}
+
 
    @keyframes slideIn {
        from {
