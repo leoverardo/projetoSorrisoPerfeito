@@ -1,7 +1,5 @@
 # Projeto Sorriso Perfeito - Landing Page
-![Banner do
-Projeto](https://via.placeholder.com/1200x300.png?text=Sorriso+Perfeit
-o+-+Landing+Page+Projeto)
+
 ## Sobre o Projeto
 A **Sorriso Perfeito** é uma clínica odontológica fictícia, e este
 projeto consiste em criar uma landing page responsiva e moderna para
