@@ -80,7 +80,7 @@
    }
 
    .section_servicos {
-       background-color: #92D7FF;
+       background-image: linear-gradient(to bottom, #92D7FF, #005EB4);
        padding-bottom: 50px;
    }
 
@@ -92,11 +92,13 @@
    }
 
    .titulo_servicos {
-       font-family: "Roboto";
-       font-size: 60px;
+       font-family: "roboto";
+       font-weight: 300;
+       font-size: 30px;
+       letter-spacing: 1.8px;
+       text-transform: uppercase;
+       text-align: center;
        color: white;
-       -webkit-text-stroke-color: white;
-       -webkit-text-stroke-width: 1px;
    }
 
    .ul_servicos {
@@ -139,7 +141,7 @@
 
    .section_contato {
        background-image: linear-gradient(to bottom, #005EB4, #005EB4);
-       
+
    }
 
    .div_titulo_contato {
@@ -229,15 +231,15 @@
 
    @media (max-width: 600px) {
        .header {
-        background-image: linear-gradient(to right, #92D7FF, #005EB4);
-       padding: 10px 50px;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       position: sticky;
-       top: 0;
-       z-index: 100;
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+           background-image: linear-gradient(to right, #92D7FF, #005EB4);
+           padding: 10px 50px;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           position: sticky;
+           top: 0;
+           z-index: 100;
+           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
        }
 
        .header_logo {
@@ -247,11 +249,11 @@
        }
 
        .header_info {
-        display: flex;  
-       gap: 30px;
-       font-family: "Roboto", sans-serif;
-       font-size: 15px;
-       font-weight: 500;
+           display: flex;
+           gap: 30px;
+           font-family: "Roboto", sans-serif;
+           font-size: 15px;
+           font-weight: 500;
        }
 
        .header_info a {
@@ -271,27 +273,27 @@
    }
 
    @media (max-width: 400px) {
-    .header {
-        padding: 10px 15px;
-    }
+       .header {
+           padding: 10px 15px;
+       }
 
-    .header_logo {
-        width: 100px;
-    }
+       .header_logo {
+           width: 100px;
+       }
 
-    .header_info {
-        display: flex;
-       gap: 1   0px;
-    }
+       .header_info {
+           display: flex;
+           gap: 1 0px;
+       }
 
-    .header_info a {
-        padding: 4px 0;
-    }
+       .header_info a {
+           padding: 4px 0;
+       }
 
-    .header_info a::after {
-        height: 1px;
-    }
-}
+       .header_info a::after {
+           height: 1px;
+       }
+   }
 
    .modal {
        position: fixed;
@@ -385,84 +387,97 @@
    .modal-form button:hover {
        background: #003f7f;
    }
+
    .modal-form label {
-    text-align: left;
+       text-align: left;
+       font-family: "Roboto";
+       font-size: 14px;
+       color: #005EB4;
+       margin-top: 5px;
+       font-weight: 500;
+   }
+
+   .modal-form select {
+       padding: 12px 15px;
+       border: 1px solid #ccc;
+       border-radius: 8px;
+       font-family: "Roboto";
+       font-size: 14px;
+       transition: border-color 0.3s ease, box-shadow 0.3s ease;
+       background-color: white;
+       appearance: none;
+       /* Remove estilo padrão do sistema */
+   }
+
+   .modal-form select:focus {
+       border-color: #005EB4;
+       box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
+       outline: none;
+   }
+
+   .form-personalizado {
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+       max-width: 600px;
+       margin: 0 auto;
+       padding: 30px;
+       background-color: white;
+       border-radius: 15px;
+       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+       font-family: "Roboto", sans-serif;
+
+   }
+
+   .form-personalizado input,
+   .form-personalizado textarea {
+       padding: 12px 15px;
+       border: 1px solid #ccc;
+       border-radius: 8px;
+       font-size: 16px;
+       font-family: "Roboto";
+       transition: border-color 0.3s ease, box-shadow 0.3s ease;
+       resize: none;
+   }
+
+   .form-personalizado input:focus,
+   .form-personalizado textarea:focus {
+       border-color: #005EB4;
+       box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
+       outline: none;
+   }
+
+   .form-personalizado label {
+       font-size: 14px;
+       color: #005EB4;
+       font-weight: 500;
+   }
+
+   .form-personalizado button {
+       padding: 12px 20px;
+       background: #005EB4;
+       color: white;
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+       font-size: 16px;
+       transition: background 0.3s ease;
+   }
+
+   .form-personalizado button:hover {
+       background: #003f7f;
+   }
+
+
+   .section_servicos h2 {
+    text-align: center;
     font-family: "Roboto";
-    font-size: 14px;
-    color: #005EB4;
-    margin-top: 5px;
-    font-weight: 500;
-}
-
-.modal-form select {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-family: "Roboto";
-    font-size: 14px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    background-color: white;
-    appearance: none; /* Remove estilo padrão do sistema */
-}
-
-.modal-form select:focus {
-    border-color: #005EB4;
-    box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
-    outline: none;
-}
-
-.form-personalizado {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    font-family: "Roboto", sans-serif;
-    
-}
-
-.form-personalizado input,
-.form-personalizado textarea {
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    font-family: "Roboto";
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    resize: none;   
-}
-
-.form-personalizado input:focus,
-.form-personalizado textarea:focus {
-    border-color: #005EB4;
-    box-shadow: 0 0 5px rgba(0, 94, 180, 0.5);
-    outline: none;
-}
-
-.form-personalizado label {
-    font-size: 14px;
-    color: #005EB4;
-    font-weight: 500;
-}
-
-.form-personalizado button {
-    padding: 12px 20px;
-    background: #005EB4;
+    font-size: 60px;
     color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s ease;
-}
-
-.form-personalizado button:hover {
-    background: #003f7f;
-}
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    margin-bottom: 40px;
+   }
 
 
    @keyframes slideIn {
