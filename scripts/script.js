@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <input type="text" name="name" placeholder="Seu Nome" required>
                         <input type="email" name="email" placeholder="Seu E-mail" required>
                         
-                        <label for="mensagem">Descreva seu pedido personalizado</label>
+                        <label for="mensagem">Envie sua Mensagem Personalizada</label>
                         <textarea name="mensagem" id="mensagem" rows="5" placeholder="Escreva aqui sua mensagem...." required></textarea>
                         
                         <button type="submit">Enviar Pedido</button>
